@@ -13,3 +13,7 @@ npx hardhat node
 node scripts/sample-script.js
 npx hardhat help
 ```
+In this project you could change the number of tickets availables using the deploy script change the first value. 
+
+To run locally use this command
+npx hardhat run --network localhost scripts/raffle-deploy.js

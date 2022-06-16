@@ -46,6 +46,7 @@ contract Raffle {
         require(msg.sender == raffleOwner, "you need be the Owner");
         uint ticketWinner = randMod(totalTickets);
         address payable winner = payable(raffle_ticket[ticketWinner]);
+        require(raffle_ticket[ticketWinner] == address(0), "Winner is a empty ticket");
         winner.transfer(totalPrize);
         totalPrize=0;
     }

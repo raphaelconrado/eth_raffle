@@ -16,7 +16,7 @@ async function main() {
 
   // We get the contract to deploy
   const Raffle = await hre.ethers.getContractFactory("Raffle");
-  const raffle = await Raffle.deploy(5, ethers.utils.parseEther("1"));
+  const raffle = await Raffle.deploy(20, ethers.utils.parseEther("1"));
 
   await raffle.deployed();
 
